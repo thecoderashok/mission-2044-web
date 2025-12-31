@@ -12,7 +12,7 @@ const AboutSec = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 content-wrapper">
-                            <ScrollReveal direction="clip-scale-in-downward" delay={0.2}>
+                            {/* <ScrollReveal direction="clip-scale-in-downward" delay={0.2}>
                                 <div className="image-box">
                                     <Image
                                         src={"/images/about-sec-img-1.jpg"}
@@ -20,8 +20,8 @@ const AboutSec = () => {
                                         height={800}
                                     />
                                 </div>
-                            </ScrollReveal>
-                            <div className="text-wrapper">
+                            </ScrollReveal> */}
+                            <div className="text-wrapper text-center">
                                 <SecTitle
                                     subTitle="About Us"
                                     mainTitle="What is Mission 2044"
@@ -54,7 +54,7 @@ const AboutSec = () => {
                                     customClass={"bordered-transparent-2"}
                                 />
 
-                                <ScrollReveal direction="clip-scale-in-downward" delay={0.2}>
+                                {/* <ScrollReveal direction="clip-scale-in-downward" delay={0.2}>
                                     <div className="image-box">
                                         <Image
                                             src={"/images/about-sec-img-2.jpg"}
@@ -62,7 +62,7 @@ const AboutSec = () => {
                                             height={800}
                                         />
                                     </div>
-                                </ScrollReveal>
+                                </ScrollReveal> */}
                             </div>
                         </div>
                     </div>

@@ -382,6 +382,7 @@
     .content-wrapper {
         display: flex;
         align-items: flex-start;
+        justify-content: center;
         gap: clamp(1.24rem, 2vw, 2.4rem);
     }
 
@@ -400,9 +401,11 @@
 
     .text-wrapper {
         position: relative;
-        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         max-width: clamp(37.2rem, 60vw, 72rem);
-        padding-top: clamp(2.48rem, 4vw, 4.8rem);
+        // padding-top: clamp(2.48rem, 4vw, 4.8rem);
 
         .sec--title-wrapper {
             margin-bottom: 0.5em;
