@@ -5,6 +5,7 @@ import "flag-icons/css/flag-icons.min.css";
 import SwiperCarousel from "../../../components/Swiper/SwiperCarousel";
 import { SwiperSlide } from "swiper/react";
 import Button from "../../../components/Button/Button";
+import ScrollReveal from "../../../components/ScrollReveal/ScrollReveal";
 
 const TESTIMONIALS = [
     {
@@ -83,73 +84,78 @@ const TestimonialsSec = () => {
                             mainTitle="What our attendees are saying"
                         />
 
-                        <div className="slide-buttons">
-                            <button
-                                type="button"
-                                ref={navPrevRef}
-                                className="slide-btn prev"
-                                aria-label="Previous slide"
-                            />
-                            <button
-                                type="button"
-                                ref={navNextRef}
-                                className="slide-btn next"
-                                aria-label="Next slide"
-                            />
-                        </div>
+
+                        <ScrollReveal direction="fade-up" delay={0.8}>
+                            <div className="slide-buttons">
+                                <button
+                                    type="button"
+                                    ref={navPrevRef}
+                                    className="slide-btn prev"
+                                    aria-label="Previous slide"
+                                />
+                                <button
+                                    type="button"
+                                    ref={navNextRef}
+                                    className="slide-btn next"
+                                    aria-label="Next slide"
+                                />
+                            </div>
+                        </ScrollReveal>
                     </div>
 
-                    <div className="col-12">
-                        <div className="testimonials-carousel">
-                            <SwiperCarousel
-                                slidesPerView={3}
-                                spaceBetween={20}
-                                breakpoints={{
-                                    768: { slidesPerView: 1.5, spaceBetween: 32 },
-                                    991: { slidesPerView: 3, spaceBetween: 20 },
-                                }}
-                                showPagination={false}
-                                navigationBtns={false}
-                                onSwiper={(swiper) => {
-                                    swiperRef.current = swiper;
-                                }}
-                            >
-                                {TESTIMONIALS.map((testimonial, index) => (
-                                    <SwiperSlide key={index}>
-                                        <article className="testimonial-card">
-                                            <span
-                                                className="quote-icon"
-                                                style={{
-                                                    maskImage: `url(/icons/quote.png)`,
-                                                    WebkitMaskImage: `url(/icons/quote.png)`,
-                                                }}
-                                            />
-                                            <div className="avatar">
-                                                <Image
-                                                    src={testimonial.avatar}
-                                                    alt={`${testimonial.name} headshot`}
-                                                    width={96}
-                                                    height={96}
+                    <ScrollReveal direction="clip-fade-up" delay={0.4}>
+                        <div className="col-12">
+                            <div className="testimonials-carousel">
+                                <SwiperCarousel
+                                    slidesPerView={3}
+                                    spaceBetween={20}
+                                    breakpoints={{
+                                        768: { slidesPerView: 1.5, spaceBetween: 32 },
+                                        991: { slidesPerView: 3, spaceBetween: 20 },
+                                    }}
+                                    showPagination={false}
+                                    navigationBtns={false}
+                                    onSwiper={(swiper) => {
+                                        swiperRef.current = swiper;
+                                    }}
+                                >
+                                    {TESTIMONIALS.map((testimonial, index) => (
+                                        <SwiperSlide key={index}>
+                                            <article className="testimonial-card">
+                                                <span
+                                                    className="quote-icon"
+                                                    style={{
+                                                        maskImage: `url(/icons/quote.png)`,
+                                                        WebkitMaskImage: `url(/icons/quote.png)`,
+                                                    }}
                                                 />
-                                            </div>
-                                            <p className="quote-text">
-                                                {testimonial.quote}
-                                            </p>
-                                            <div className="meta-wrapper">
-                                                <h3 className="name-text">
-                                                    {testimonial.name}
-                                                </h3>
-                                                <p className="role-text">
-                                                    <span className={`fi fi-${testimonial.country}`}></span>
-                                                    {testimonial.designation}
+                                                <div className="avatar">
+                                                    <Image
+                                                        src={testimonial.avatar}
+                                                        alt={`${testimonial.name} headshot`}
+                                                        width={96}
+                                                        height={96}
+                                                    />
+                                                </div>
+                                                <p className="quote-text">
+                                                    {testimonial.quote}
                                                 </p>
-                                            </div>
-                                        </article>
-                                    </SwiperSlide>
-                                ))}
-                            </SwiperCarousel>
+                                                <div className="meta-wrapper">
+                                                    <h3 className="name-text">
+                                                        {testimonial.name}
+                                                    </h3>
+                                                    <p className="role-text">
+                                                        <span className={`fi fi-${testimonial.country}`}></span>
+                                                        {testimonial.designation}
+                                                    </p>
+                                                </div>
+                                            </article>
+                                        </SwiperSlide>
+                                    ))}
+                                </SwiperCarousel>
+                            </div>
                         </div>
-                    </div>
+                    </ScrollReveal>
 
                     <div className="col-12 btn-wrapper">
                         <Button
