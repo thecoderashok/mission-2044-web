@@ -30,7 +30,7 @@
 
     &.bordered-transparent {
         border: 1px solid var(--border-color);
-        --bg-color: rgba(255, 255, 255, 0);
+        --bg-color: transparent;
         --hover-bg-color: white;
         --border-color: rgba(255, 255, 255, 0.815);
         --hover-border-color: white;
@@ -39,10 +39,10 @@
     }
     &.bordered-transparent-2 {
         border: 1px solid var(--border-color);
-        --bg-color: rgba(0, 0, 0, 0);
+        --bg-color: transparent;
         --hover-bg-color: rgb(0, 0, 0);
         --border-color: rgba(0, 0, 0, 0.815);
-        --hover-border-color: white;
+        --hover-border-color: rgb(0, 0, 0);
         --color: #000000;
         --hover-color: rgb(255, 255, 255);
     }
