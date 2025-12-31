@@ -49,7 +49,7 @@ const SPEAKERS = [
 
 const SpeakersSec = () => {
     return (
-        <section className="speakers-sec pt-0">
+        <section className="speakers-sec">
             <div className="container">
                 <div className="row">
                     <div className="col-12">

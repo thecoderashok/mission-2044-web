@@ -43,7 +43,6 @@ const TESTIMONIALS = [
 ];
 
 
-
 const TestimonialsSec = () => {
     const navPrevRef = useRef(null);
     const navNextRef = useRef(null);
@@ -83,7 +82,6 @@ const TestimonialsSec = () => {
                             subTitle="Testimonials"
                             mainTitle="What our attendees are saying"
                         />
-
 
                         <ScrollReveal direction="fade-up" delay={0.8}>
                             <div className="slide-buttons">

@@ -3,6 +3,7 @@ import Image from "../../../components/Image";
 import TextSplit from "../../../components/TextSplit";
 import Button from "../../../components/Button/Button";
 import ScrollReveal from "../../../components/ScrollReveal/ScrollReveal";
+import SecTitle from "../../../components/SecTitle";
 
 const AboutSec = () => {
     return (
@@ -21,9 +22,10 @@ const AboutSec = () => {
                                 </div>
                             </ScrollReveal>
                             <div className="text-wrapper">
-                                <TextSplit reveal={true} revealDelay={0.2}>
-                                    <h2 className="title-text">What is Mission 2044</h2>
-                                </TextSplit>
+                                <SecTitle
+                                    subTitle="About Us"
+                                    mainTitle="What is Mission 2044"
+                                />
 
                                 <ScrollReveal direction="clip-fade-up" delay={0.3}>
                                     <p className="size-large">
