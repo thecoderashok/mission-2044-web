@@ -92,6 +92,8 @@
                 width: clamp(35.96rem, 58vw, 69.6rem);
                 height: auto;
                 filter: brightness(100) invert(0);
+                user-select: none;
+                pointer-events: none;
             }
         }
     }

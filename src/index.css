@@ -30,7 +30,7 @@
 
 html {
    scrollbar-width: thin;
-   scrollbar-color: var(--color-primary) rgb(224, 224, 224);
+   scrollbar-color: black rgb(224, 224, 224);
    text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
