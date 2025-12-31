@@ -26,22 +26,28 @@ export const FooterMenu = [
     {
         heading: "Information Links",
         menu: [
-            { label: "Home", path: "#" },
-            { label: "About Synergy", path: "#" },
-            { label: "Advantage Synergy", path: "#" },
-            { label: "NR Investors", path: "#" },
-            { label: "Contact Us", path: "#" },
+            {
+                label: "New York",
+                path: "#",
+            },
+            {
+                label: "Dusseldorf",
+                path: "#",
+            },
+            {
+                label: "Sydney",
+                path: "#",
+            },
+            {
+                label: "Berlin",
+                path: "#",
+            },
+            {
+                label: "Mission",
+                path: "#",
+            },
         ],
-    },
-    {
-        heading: "Project Links",
-        menu: [
-            { label: "Residential Plotting Projects", path: "#" },
-            { label: "Farm Plots", path: "#" },
-            { label: "Re-Development", path: "#" },
-            { label: "Delivered", path: "#" },
-        ],
-    },
+    }
 ];
 
 

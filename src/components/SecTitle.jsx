@@ -9,7 +9,7 @@ function SecTitle({
 	additionalClass,
 	delayTitle = 200,
 	delayDesc = 0.3,
-	// revealLetters = false,
+	revealLetters = false,
 	reveal = true,
 	headingTag = "h2",
 }) {
@@ -23,7 +23,7 @@ function SecTitle({
 			{mainTitle && (
 				<TextSplit
 					revealDelay={delayTitle}
-					revealLetters={true}
+					revealLetters={revealLetters}
 					reveal={reveal}
 				>
 					<Tag className="sec--main-title">{mainTitle}</Tag>

@@ -3,7 +3,7 @@ import { headerConfig } from './lib/routeConfig';
 import { useClassNames } from './hook/useClassNames';
 import { Outlet, useLocation } from 'react-router';
 import MainHeader from './components/Header/MainHeader';
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 
 function Layout() {
     const location = useLocation();
@@ -35,7 +35,7 @@ function Layout() {
             <main className={classes(isHeaderNotTransparent && "top-space-margin")} ref={mainRef}>
                 <Outlet />
             </main>
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }

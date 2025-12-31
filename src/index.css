@@ -10,7 +10,7 @@
    --alt-font: "Oswald", sans-serif;
 
    --body-bg: #0D0D0F;
-   --color-primary: #fce093;
+   --color-primary: #ffffff;
    --color-secondary: #181818;
 
    --content-padding-x: clamp(12px, 2vw, 2.4rem);
@@ -46,7 +46,7 @@ body {
    line-height: 1.6;
    overflow-x: hidden;
    overflow-y: auto !important;
-   background-color: var(--body-bg);
+   background: #FFFFFF;
    padding-right: 0 !important;
 }
 
@@ -133,7 +133,7 @@ p {
    display: inline-block;
    line-height: 1.2;
    vertical-align: middle;
-   overflow: hidden;
+   /* overflow: hidden; */
    max-width: -moz-fit-content;
    max-width: -webkit-fit-content;
    max-width: fit-content;
@@ -324,7 +324,7 @@ section.sec-offwhite {
    align-items: center;
    padding: 0 20px;
    padding-bottom: var(--wrapper-padding-bottom) !important;
-   gap: 8px;
+   gap: clamp(0.31rem, 0.5vw, 0.6rem);
    z-index: 9;
    pointer-events: none !important;
 }
@@ -345,20 +345,28 @@ section.sec-offwhite {
    right: 0;
 }
 
+.slide-buttons {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: clamp(0.31rem, 0.5vw, 0.6rem);
+}
+
 .slide-buttons .slide-btn,
 .slider-nav-wrapper .slide-btn {
    position: relative;
-   width: 50px;
-   height: 50px;
+   --size: clamp(1.74rem, 2.8vw, 3.36rem);
+   width: var(--size);
+   height: var(--size);
    border-radius: 50%;
    border: 1px solid var(--slider-nav-border-color);
-   font-size: 1.2rem;
-   --slider-nav-border-color: rgba(255, 255, 255, 0.6);
-   --slider-nav-hover-border-color: #bad531;
+   font-size: clamp(0.75rem, 1.2vw, 1.44rem);
+   --slider-nav-border-color: rgba(0, 0, 0, 0.5);
+   --slider-nav-hover-border-color: var(--color-secondary);
    --slider-nav-bg: transparent;
-   --slider-nav-hover-bg: #bad531;
-   --slider-nav-arrow-color: #e0e0e0;
-   --slider-nav-arrow-hover-color: #000000;
+   --slider-nav-hover-bg: var(--color-secondary);
+   --slider-nav-arrow-color: var(--color-secondary);
+   --slider-nav-arrow-hover-color: #ffffff;
    background: var(--slider-nav-bg);
    backdrop-filter: blur(8px);
    transition: all 0.3s ease;
@@ -387,7 +395,7 @@ section.sec-offwhite {
    position: absolute;
    content: "\f061";
    font-family: "Font Awesome 6 Pro";
-   font-weight: 700;
+   font-weight: 300;
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%) translateZ(0);
@@ -426,38 +434,6 @@ section.sec-offwhite {
 
 .slider-nav-wrapper .slide-btn svg {
    display: none;
-}
-
-@media screen and (max-width: 1200px) {
-
-   .slide-buttons .slide-btn,
-   .slider-nav-wrapper .slide-btn {
-      width: 52px;
-      height: 52px;
-      font-size: 1rem;
-   }
-}
-
-@media screen and (max-width: 767px) {
-
-   .slide-buttons .slide-btn,
-   .slider-nav-wrapper .slide-btn {
-      width: 42px;
-      height: 42px;
-      font-size: 0.9rem;
-   }
-
-   .slide-buttons {
-      gap: 8px !important;
-   }
-}
-
-@media screen and (max-width: 575px) {
-
-   .slide-buttons .slide-btn::after,
-   .slider-nav-wrapper .slide-btn::after {
-      font-size: 1rem;
-   }
 }
 
 

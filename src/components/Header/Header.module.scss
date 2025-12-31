@@ -33,9 +33,10 @@
 
     .logo_wrapper {
         position: relative;
-        width: 16vw;
+        width: clamp(10rem, 16vw, 19.2rem);
         aspect-ratio: 19/6;
-        padding: 10px 12px;
+        padding: clamp(0.62rem, 1vw, 1.2rem) 0;
+        padding-left: 12px !important;
         display: flex;
         align-items: center;
         z-index: 9999;
@@ -90,7 +91,6 @@
         }
 
         &.sticky_header {
-            
             // animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
             &::before {
@@ -101,6 +101,15 @@
                 .header_menu_btn {
                     color: #2c2c2c;
                 }
+            }
+
+            .cta_btn {
+                --bg-color: transparent;
+                --hover-bg-color: var(--color-secondary);
+                --border-color: rgba(0, 0, 0, 0.747);
+                --hover-border-color: var(--hover-bg-color);
+                --color: #1d1d1d;
+                --hover-color: white;
             }
         }
     }
@@ -116,7 +125,7 @@
             display: flex;
             justify-content: center;
             list-style: none;
-            gap: 2vw;
+            gap: clamp(1.24rem, 2vw, 2.4rem);
             padding: 0;
             margin: 0;
         }
