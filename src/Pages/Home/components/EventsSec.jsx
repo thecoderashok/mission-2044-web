@@ -63,6 +63,10 @@ const EventsSec = () => {
                                                 width={640}
                                                 height={400}
                                             />
+                                            <Button
+                                                textLabel="Learn more"
+                                                customClass="bordered-transparent-2"
+                                            />
                                         </div>
                                         <div className="text-content">
                                             <div className="card-meta">
@@ -71,10 +75,6 @@ const EventsSec = () => {
                                             </div>
                                             <h3 className="title-text">{event.title}</h3>
                                         </div>
-                                        <Button
-                                            textLabel="Learn more"
-                                            customClass="bordered-transparent-2"
-                                        />
                                     </article>
                                 </ScrollReveal>
                             </SwiperSlide>
