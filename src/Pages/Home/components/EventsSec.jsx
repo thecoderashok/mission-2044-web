@@ -46,7 +46,7 @@ const EventsSec = () => {
                             640: { slidesPerView: 2 },
                             991: { slidesPerView: 4, spaceBetween: 15 },
                         }}
-                        navigationBtns={true}
+                        navigationBtns={false}
                         showPagination={false}
                     >
                         {EVENTS.map((event, index) => (
@@ -63,10 +63,6 @@ const EventsSec = () => {
                                                 width={640}
                                                 height={400}
                                             />
-                                            <Button
-                                                textLabel="Learn more"
-                                                customClass="bordered-transparent-2"
-                                            />
                                         </div>
                                         <div className="text-content">
                                             <div className="card-meta">
@@ -74,6 +70,10 @@ const EventsSec = () => {
                                                 <span>{event.location}</span>
                                             </div>
                                             <h3 className="title-text">{event.title}</h3>
+                                            <Button
+                                                textLabel="Learn more"
+                                                customClass="bordered-transparent-2"
+                                            />
                                         </div>
                                     </article>
                                 </ScrollReveal>
